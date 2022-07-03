@@ -24,7 +24,7 @@
 
 - name: "install pm2"
   become: yes
-  become_user: sudo
+  become_user: root
   npm:
     name: pm2
     global: yes
