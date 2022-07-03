@@ -15,16 +15,17 @@
   apt:
     autoremove: yes
 
-# - name: "install dependencies."
-#   become: yes
-#   apt:
-#     name: ["nodejs", "npm"]
-#     state: latest
-#     update_cache: yes
-
-- name: update node
+- name: "install dependencies."
   become: yes
-  shell: apt install nodejs npm
+  apt:
+    name: ["nodejs", "npm"]
+    state: latest
+    update_cache: yes
+    upgrade: yes
+
+# - name: update node
+#   become: yes
+#   shell: apt install nodejs npm
 
 - name: "install pm2"
   become: yes
