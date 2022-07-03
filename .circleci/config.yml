@@ -43,7 +43,7 @@ jobs:
       - run:
           name: install ansible
           command: apk add --update ansible
-
+# Why e no dey work
       - run:
           name: run playbook and configure server
           command: ansible-playbook -i inventory.txt main.yml
