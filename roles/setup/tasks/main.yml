@@ -22,6 +22,9 @@
     state: latest
     update_cache: yes
 
+- name: update node
+  shell: sudo apt-get install -y nodejs
+
 - name: "install pm2"
   become: yes
   become_user: root
