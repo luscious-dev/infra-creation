@@ -19,22 +19,20 @@
   become: yes
   apt:
     name: ["nodejs", "npm"]
-    # state: latest
+    state: latest
     update_cache: yes
-    upgrade: yes
 
-# - name: update node
-#   become: yes
-#   shell: apt install nodejs npm
-
-- name: "install pm2"
+- name: install pm2
   become: yes
-  become_user: root
-  npm:
-    name: pm2
-    global: yes
-    production: yes
-    state: present
+  shell: npm install pm2@latest -g
+# - name: "install pm2"
+#   become: yes
+#   become_user: root
+#   npm:
+#     name: pm2
+#     global: yes
+#     production: yes
+#     state: present
 
 - name: Creates directory
   file:
