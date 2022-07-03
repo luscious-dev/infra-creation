@@ -1,0 +1,7 @@
+---
+- name: Copy files to ec2
+  hosts: all
+  user: ubuntu
+
+  roles:
+    - setup
