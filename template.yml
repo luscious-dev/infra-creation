@@ -18,5 +18,5 @@ Resources:
       SecurityGroups:
         - !Ref Ec2SecurityGroup
       KeyName: tmp-key
-      ImageId: 'ami-0b0ea68c435eb488d'
+      ImageId: 'ami-052efd3df9dad4825'
       InstanceType: t3.micro

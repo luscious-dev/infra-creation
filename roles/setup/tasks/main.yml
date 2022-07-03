@@ -22,17 +22,14 @@
     state: latest
     update_cache: yes
 
-- name: install pm2
+- name: "install pm2"
   become: yes
-  shell: npm install pm2@latest -g
-# - name: "install pm2"
-#   become: yes
-#   become_user: root
-#   npm:
-#     name: pm2
-#     global: yes
-#     production: yes
-#     state: present
+  become_user: root
+  npm:
+    name: pm2
+    global: yes
+    production: yes
+    state: present
 
 - name: Creates directory
   file:
