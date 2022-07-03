@@ -23,7 +23,8 @@
 #     update_cache: yes
 
 - name: update node
-  shell: sudo apt install nodejs npm
+  become: yes
+  shell: apt install nodejs npm
 
 - name: "install pm2"
   become: yes
