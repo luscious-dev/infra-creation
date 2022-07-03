@@ -20,7 +20,6 @@
   apt:
     name: ["nodejs", "npm"]
     state: latest
-    update_cache: yes
     upgrade: yes
 
 # - name: update node
