@@ -23,8 +23,8 @@
     update_cache: yes
 
 - name: "install pm2"
-  become: yes
-  become_user: sudo
+  # become: yes
+  # become_user: sudo
   shell: npm install -g --no-optional pm2
 
 - name: Creates directory
